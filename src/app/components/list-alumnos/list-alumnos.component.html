@@ -1,0 +1,18 @@
+<div class="card mt-5" *ngFor="let alumno of listAlumnos; let i = index">
+  <div class="card-header text-center">
+    {{alumno.nombre}} : {{alumno.estado}}
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-lg-4">
+        <button type="button" class="btn btn-warning w-100" (click)="updateAlumno(i,'No Aprobado')">No Aprobado</button>
+      </div>
+      <div class="col-lg-4">
+        <button type="button" class="btn btn-success w-100" (click)="updateAlumno(i,'Aprobado')">Aprobado</button>
+      </div>
+      <div class="col-lg-4">
+        <button type="button" class="btn btn-dark w-100" (click)="updateAlumno(i,'Promocionado')">Promocionado</button>
+      </div>
+    </div>
+  </div>
+</div>
